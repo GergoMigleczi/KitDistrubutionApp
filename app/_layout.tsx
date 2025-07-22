@@ -1,12 +1,11 @@
-// app/_layout.tsx
-import { Stack } from 'expo-router';
+import React from 'react';
+import { Slot } from 'expo-router';
+import { ThemeProvider } from '../theme/ThemeProvider';
 
 export default function Layout() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false, // ✅ disables the default nav bar
-      }}
-    />
+    <ThemeProvider>
+      <Slot />
+    </ThemeProvider>
   );
 }
